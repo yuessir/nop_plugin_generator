@@ -669,12 +669,15 @@
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "C:\\Projects\\Helpers\\BASPluginTemplator\\BASPluginTemplator.csproj",
-      "projectName": "BASPluginTemplator",
-      "projectPath": "C:\\Projects\\Helpers\\BASPluginTemplator\\BASPluginTemplator.csproj",
+      "projectUniqueName": "C:\\Projects\\Helpers\\BASPluginTemplator\\src\\NopPluginTemplator.csproj",
+      "projectName": "NopPluginTemplator",
+      "projectPath": "C:\\Projects\\Helpers\\BASPluginTemplator\\src\\NopPluginTemplator.csproj",
       "packagesPath": "C:\\Users\\showell\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\Helpers\\BASPluginTemplator\\obj\\",
+      "outputPath": "C:\\Projects\\Helpers\\BASPluginTemplator\\src\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

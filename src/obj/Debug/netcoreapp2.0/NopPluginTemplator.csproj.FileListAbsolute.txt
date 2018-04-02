@@ -1,0 +1,11 @@
+C:\Projects\Helpers\BASPluginTemplator\src\obj\Debug\netcoreapp2.0\NopPluginTemplator.csprojResolveAssemblyReference.cache
+C:\Projects\Helpers\BASPluginTemplator\src\obj\Debug\netcoreapp2.0\NopPluginTemplator.csproj.CoreCompileInputs.cache
+C:\Projects\Helpers\BASPluginTemplator\src\obj\Debug\netcoreapp2.0\NopPluginTemplator.AssemblyInfoInputs.cache
+C:\Projects\Helpers\BASPluginTemplator\src\obj\Debug\netcoreapp2.0\NopPluginTemplator.AssemblyInfo.cs
+C:\Projects\Helpers\BASPluginTemplator\src\bin\Debug\netcoreapp2.0\NopPluginTemplator.deps.json
+C:\Projects\Helpers\BASPluginTemplator\src\bin\Debug\netcoreapp2.0\NopPluginTemplator.runtimeconfig.json
+C:\Projects\Helpers\BASPluginTemplator\src\bin\Debug\netcoreapp2.0\NopPluginTemplator.runtimeconfig.dev.json
+C:\Projects\Helpers\BASPluginTemplator\src\bin\Debug\netcoreapp2.0\NopPluginTemplator.dll
+C:\Projects\Helpers\BASPluginTemplator\src\bin\Debug\netcoreapp2.0\NopPluginTemplator.pdb
+C:\Projects\Helpers\BASPluginTemplator\src\obj\Debug\netcoreapp2.0\NopPluginTemplator.dll
+C:\Projects\Helpers\BASPluginTemplator\src\obj\Debug\netcoreapp2.0\NopPluginTemplator.pdb

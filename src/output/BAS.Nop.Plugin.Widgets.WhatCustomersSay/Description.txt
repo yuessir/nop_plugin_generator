@@ -1,0 +1,9 @@
+Group: Widgets
+FriendlyName: What Customers Say
+SystemName: Widgets.WhatCustomersSay
+Version: 0.1
+SupportedVersions: 3.90
+Author: Bayshore Solutions
+DisplayOrder: 1
+FileName: BAS.Nop.Plugin.Widgets.WhatCustomersSay.dll
+Description: This plugin will display the what customers say section.

@@ -1,0 +1,8 @@
+﻿@{
+    Layout = "";
+}
+@model {{NAMESPACE_PREFIX}}.{{PROJECT_NAME}}.Models.ConfigurationModel
+@using Nop.Web.Framework;
+
+@Html.Action("StoreScopeConfiguration", "Setting", new { area = "Admin" })
+

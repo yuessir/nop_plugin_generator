@@ -1,0 +1,10 @@
+C:\Projects\Helpers\BASPluginTemplator\src\bin\release\netcoreapp2.0\BASPluginTemplator.deps.json
+C:\Projects\Helpers\BASPluginTemplator\src\bin\release\netcoreapp2.0\BASPluginTemplator.runtimeconfig.json
+C:\Projects\Helpers\BASPluginTemplator\src\bin\release\netcoreapp2.0\BASPluginTemplator.runtimeconfig.dev.json
+C:\Projects\Helpers\BASPluginTemplator\src\bin\release\netcoreapp2.0\BASPluginTemplator.dll
+C:\Projects\Helpers\BASPluginTemplator\src\bin\release\netcoreapp2.0\BASPluginTemplator.pdb
+C:\Projects\Helpers\BASPluginTemplator\src\obj\release\netcoreapp2.0\BASPluginTemplator.csproj.CoreCompileInputs.cache
+C:\Projects\Helpers\BASPluginTemplator\src\obj\release\netcoreapp2.0\BASPluginTemplator.AssemblyInfoInputs.cache
+C:\Projects\Helpers\BASPluginTemplator\src\obj\release\netcoreapp2.0\BASPluginTemplator.AssemblyInfo.cs
+C:\Projects\Helpers\BASPluginTemplator\src\obj\release\netcoreapp2.0\BASPluginTemplator.dll
+C:\Projects\Helpers\BASPluginTemplator\src\obj\release\netcoreapp2.0\BASPluginTemplator.pdb

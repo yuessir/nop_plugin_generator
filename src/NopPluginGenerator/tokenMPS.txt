@@ -1,0 +1,13 @@
+PROJECT_NAME=MostPopularSizes
+NAMESPACE_PREFIX=BAS.Nop.Plugin.Widgets
+CONTROLLER_PREFIX=BAS
+DESCRIPTION_Group=Widgets
+DESCRIPTION_FriendlyName=Most Popular Sizes
+DESCRIPTION_SystemName=Widgets.{{PROJECT_NAME}}
+DESCRIPTION_Version=0.1
+DESCRIPTION_SupportedVersions=3.90
+DESCRIPTION_Author=Bayshore Solutions
+DESCRIPTION_DisplayOrder=1
+DESCRIPTION_FileName={{NAMESPACE_PREFIX}}.{{PROJECT_NAME}}.dll
+DESCRIPTION_Description=This plugin will display the most popular sizes section.
+WIDGET_ZONE=most_popular_sizes_display

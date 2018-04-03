@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Xml.Serialization;
 
-namespace NopPluginTemplator.Configuration
+namespace NopPluginGenerator.Configuration
 {
     public class TemplateConfig {      
         [XmlArrayItem("Map")]

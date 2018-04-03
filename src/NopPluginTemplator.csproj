@@ -14,4 +14,8 @@
     <None Remove="templates\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="templates\BAS\plugin\widget\" />
+  </ItemGroup>
+
 </Project>

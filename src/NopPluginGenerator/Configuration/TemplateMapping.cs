@@ -1,6 +1,6 @@
 using System.Xml.Serialization;
 
-namespace NopPluginTemplator.Configuration
+namespace NopPluginGenerator.Configuration
 {
     public class TemplateMapping
     {

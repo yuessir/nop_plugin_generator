@@ -2,17 +2,44 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using NopPluginTemplator.Configuration;
-using NopPluginTemplator.Utility;
+using CommandLine;
+using NopPluginGenerator.Configuration;
+using NopPluginGenerator.Utility;
 
-namespace NopPluginTemplator
+namespace NopPluginGenerator
 {
+    // npg new template outputFolder
+    // npg gen template outputFolder
+    // npg tok template outputFolder
+    
+
+    [Verb("new", HelpText = "")]
+    class NewSubOptions
+    {
+        
+    }
+
+    [Verb("gen", HelpText = "")]
+    class GenerateSubOptions
+    {
+        
+    }
+
+    class Options
+    {
+        public NewSubOptions NewVerb { get; set; }
+        [Option()]
+        public string TemplateName { get; set; }
+    }
+
     class Program
     {
         private const string TemplateConfigFile = "templates.xml";
 
         static void Main(string[] args)
         {
+            var options = new Options();
+
             // Check arguments
             if (args.Length < 3)
             {

@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Widgets",
+  "FriendlyName": "{{DESCRIPTION_FriendlyName}}",
+  "SystemName": "{{DESCRIPTION_SystemName}}",
+  "Version": "{{DESCRIPTION_Version}}",
+  "SupportedVersions": {{"DESCRIPTION_SupportedVersions"}},
+  "Author": "{{DESCRIPTION_Author}}",
+  "DisplayOrder": {{"DESCRIPTION_DisplayOrder"}},
+  "FileName": "{{DESCRIPTION_FileName}}",
+  "Description": "{{DESCRIPTION_Description}}"
+}

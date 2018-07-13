@@ -32,7 +32,7 @@ namespace NopPluginGenerator.Template
             // Insert Project Guid to tokens
             if (!tokens.ContainsKey("PROJECT_GUID"))
             {
-                var projectGuid = $"{{{Guid.NewGuid().ToString()}}}";
+                var projectGuid = $"__{Guid.NewGuid().ToString()}__";
                 tokens.Add("PROJECT_GUID", projectGuid);
             }
         }

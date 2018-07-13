@@ -7,7 +7,7 @@ using Nop.Core.Infrastructure.DependencyManagement;
 using Nop.Data;
 using Nop.Web.Framework.Mvc;
 
-namespace {{NAMESPACE_PREFIX}}.{{PROJECT_NAME}}.Infrastructure
+namespace __NAMESPACE_PREFIX__.__PROJECT_NAME__.Infrastructure
 {
     public class DependencyRegistrar : IDependencyRegistrar
     {

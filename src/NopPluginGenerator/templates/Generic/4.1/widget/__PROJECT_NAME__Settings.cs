@@ -4,7 +4,7 @@ namespace __NAMESPACE_PREFIX__.__PROJECT_NAME__
 {
     public class __PROJECT_NAME__Settings : ISettings
     {
-        public const string PluginPath = "~/Plugins/Widgets.__PROJECT_NAME__";
+       public const string PluginPath = "~/Plugins/Widgets.__PROJECT_NAME__";
 
         public enum WidgetZones
         {

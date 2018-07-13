@@ -4,7 +4,7 @@ using System.Web;
 using System.Collections.Generic;
 using System.Text;
 
-namespace {{NAMESPACE_PREFIX}}.{{PROJECT_NAME}}.Infrastructure
+namespace __NAMESPACE_PREFIX__.__PROJECT_NAME__.Infrastructure
 {
     public class RouteProvider : IRouteProvider
     {

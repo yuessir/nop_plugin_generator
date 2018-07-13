@@ -53,9 +53,18 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Content Include="templates\Generic\4.1\widget\logo.jpg" />
-    <Content Include="templates\Generic\4.1\widget\Notes.txt" />
-    <Content Include="templates\Generic\4.1\widget\{{NAMESPACE_PREFIX}}.{{PROJECT_NAME}}.csproj" />
+    <None Include="templates\Generic\4.1\widget\logo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="templates\Generic\4.1\widget\Notes.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="templates\Generic\4.1\widget\Views\_ViewImports.cshtml" />
+    <None Include="templates\Generic\4.1\widget\Views\__CONTROLLER_PREFIX____PROJECT_NAME__\Configure.cshtml" />
+    <None Include="templates\Generic\4.1\widget\Views\__CONTROLLER_PREFIX____PROJECT_NAME__\PublicInfo.cshtml" />
+    <None Include="templates\Generic\4.1\widget\__NAMESPACE_PREFIX__.__PROJECT_NAME__.csproj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="templates\Generic\3.9\widget\Controllers\{{CONTROLLER_PREFIX}}{{PROJECT_NAME}}Controller.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -89,13 +98,24 @@
     <Content Include="templates\Generic\3.9\widget\{{PROJECT_NAME}}Settings.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Compile Include="templates\Generic\4.1\widget\Components\Widgets{{PROJECT_NAME}}ViewComponent.cs" />
-    <Compile Include="templates\Generic\4.1\widget\Controllers\{{CONTROLLER_PREFIX}}{{PROJECT_NAME}}Controller.cs" />
-    <Compile Include="templates\Generic\4.1\widget\Infrastructure\Cache\ModelCacheEventConsumer.cs" />
-    <Compile Include="templates\Generic\4.1\widget\Models\ConfigurationModel.cs" />
-    <Compile Include="templates\Generic\4.1\widget\Models\PublicInfoModel.cs" />
-    <Compile Include="templates\Generic\4.1\widget\{{PROJECT_NAME}}Plugin.cs" />
-    <Compile Include="templates\Generic\4.1\widget\{{PROJECT_NAME}}Settings.cs" />
+    <None Include="templates\Generic\4.1\widget\Components\Widgets__PROJECT_NAME__ViewComponent.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="templates\Generic\4.1\widget\Controllers\__CONTROLLER_PREFIX____PROJECT_NAME__Controller.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="templates\Generic\4.1\widget\Models\ConfigurationModel.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="templates\Generic\4.1\widget\Models\PublicInfoModel.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="templates\Generic\4.1\widget\__PROJECT_NAME__Plugin.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="templates\Generic\4.1\widget\__PROJECT_NAME__Settings.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Compile Include="Template\Processor.cs" />
     <Compile Include="Template\TemplateDoc.cs" />
     <Compile Include="Template\TemplateFolder.cs" />
@@ -115,11 +135,9 @@
     <Content Include="templates\Generic\3.9\widget\web.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="templates\Generic\4.1\widget\plugin.json" />
-    <None Include="templates\Generic\4.1\widget\Views\{{CONTROLLER_PREFIX}}{{PROJECT_NAME}}\Configure.cshtml" />
-    <None Include="templates\Generic\4.1\widget\Views\{{CONTROLLER_PREFIX}}{{PROJECT_NAME}}\PublicInfo.cshtml" />
-    <None Include="templates\Generic\4.1\widget\Views\{{CONTROLLER_PREFIX}}{{PROJECT_NAME}}\_PublicInfo.SliderLine.cshtml" />
-    <None Include="templates\Generic\4.1\widget\Views\{{CONTROLLER_PREFIX}}{{PROJECT_NAME}}\_ViewImports.cshtml" />
+    <None Include="templates\Generic\4.1\widget\plugin.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="token.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -132,6 +150,7 @@
   <ItemGroup>
     <Folder Include="templates\Generic\3.5\" />
     <Folder Include="templates\Generic\4.0\" />
+    <Folder Include="templates\Generic\4.1\widget\Infrastructure\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

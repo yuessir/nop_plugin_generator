@@ -10,11 +10,11 @@ using Nop.Services.Stores;
 using Nop.Web.Framework.Controllers;
 using System.Linq;
 using System.Web.Mvc;
-using {{NAMESPACE_PREFIX}}.{{PROJECT_NAME}}.Models;
+using __NAMESPACE_PREFIX__.__PROJECT_NAME__.Models;
 
-namespace {{NAMESPACE_PREFIX}}.{{PROJECT_NAME}}.Controllers
+namespace __NAMESPACE_PREFIX__.__PROJECT_NAME__.Controllers
 {
-    public class {{CONTROLLER_PREFIX}}{{PROJECT_NAME}}Controller : BasePluginController
+    public class __CONTROLLER_PREFIX____PROJECT_NAME__Controller : BasePluginController
     {
         #region Fields
         private readonly ILocalizationService _localizationService;
@@ -30,7 +30,7 @@ namespace {{NAMESPACE_PREFIX}}.{{PROJECT_NAME}}.Controllers
         #endregion
 
         #region ctor
-        public {{CONTROLLER_PREFIX}}{{PROJECT_NAME}}Controller(
+        public __CONTROLLER_PREFIX____PROJECT_NAME__Controller(
             IStoreContext storeContext,
             IWorkContext workContext,
 
@@ -62,7 +62,7 @@ namespace {{NAMESPACE_PREFIX}}.{{PROJECT_NAME}}.Controllers
         {
             var model = new ConfigurationModel();
 
-            return View({{PROJECT_NAME}}Settings.PluginPath + "/Views/{{CONTROLLER_PREFIX}}{{PROJECT_NAME}}/Configure.cshtml", model);
+            return View(__PROJECT_NAME__Settings.PluginPath + "/Views/__CONTROLLER_PREFIX____PROJECT_NAME__/Configure.cshtml", model);
         }
 
         [HttpPost]
@@ -82,7 +82,7 @@ namespace {{NAMESPACE_PREFIX}}.{{PROJECT_NAME}}.Controllers
             PublicInfoViewModel model = new PublicInfoViewModel();
 
             // Display the View
-            return View({{PROJECT_NAME}}Settings.PluginPath + "/Views/{{CONTROLLER_PREFIX}}{{PROJECT_NAME}}/PublicInfo.cshtml", model);
+            return View(__PROJECT_NAME__Settings.PluginPath + "/Views/__CONTROLLER_PREFIX____PROJECT_NAME__/PublicInfo.cshtml", model);
         }
         #endregion
 
@@ -90,7 +90,7 @@ namespace {{NAMESPACE_PREFIX}}.{{PROJECT_NAME}}.Controllers
         [AdminAuthorize]
         public ActionResult List()
         {
-            return View({{PROJECT_NAME}}Settings.PluginPath + "/Views/{{CONTROLLER_PREFIX}}{{PROJECT_NAME}}/List.cshtml");
+            return View(__PROJECT_NAME__Settings.PluginPath + "/Views/__CONTROLLER_PREFIX____PROJECT_NAME__/List.cshtml");
         }
         #endregion
 
@@ -102,7 +102,7 @@ namespace {{NAMESPACE_PREFIX}}.{{PROJECT_NAME}}.Controllers
         [AdminAuthorize]
         public ActionResult Test()
         {
-            return View({{PROJECT_NAME}}Settings.PluginPath + "/Views/{{CONTROLLER_PREFIX}}{{PROJECT_NAME}}/Test.cshtml");
+            return View(__PROJECT_NAME__Settings.PluginPath + "/Views/__CONTROLLER_PREFIX____PROJECT_NAME__/Test.cshtml");
         }
         #endregion
     }

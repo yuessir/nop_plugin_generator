@@ -5,39 +5,39 @@ using Nop.Services.Localization;
 using System.Collections.Generic;
 using System.Web.Routing;
 
-namespace {{NAMESPACE_PREFIX}}.{{PROJECT_NAME}}
+namespace __NAMESPACE_PREFIX__.__PROJECT_NAME__
 {
-    public class {{PROJECT_NAME}}Plugin : BasePlugin, IWidgetPlugin
+    public class __PROJECT_NAME__Plugin : BasePlugin, IWidgetPlugin
     {
         #region Fields
         private readonly ISettingService _settingService;
-        private readonly {{PROJECT_NAME}}Settings _{{PROJECT_NAME}}Settings;
+        private readonly __PROJECT_NAME__Settings ___PROJECT_NAME__Settings;
         #endregion
 
         #region Ctor
-        public {{PROJECT_NAME}}Plugin(
+        public __PROJECT_NAME__Plugin(
             ISettingService settingService,
-            {{PROJECT_NAME}}Settings {{PROJECT_NAME}}Settings)
+            __PROJECT_NAME__Settings __PROJECT_NAME__Settings)
         {
             this._settingService = settingService;
-            this._{{PROJECT_NAME}}Settings = {{PROJECT_NAME}}Settings;
+            this.___PROJECT_NAME__Settings = __PROJECT_NAME__Settings;
         }
         #endregion
 
         public void GetConfigurationRoute(out string actionName, out string controllerName, out System.Web.Routing.RouteValueDictionary routeValues)
         {
             actionName = "Configure";
-            controllerName = "{{CONTROLLER_PREFIX}}{{PROJECT_NAME}}";
-            routeValues = new RouteValueDictionary { { "Namespaces", "{{NAMESPACE_PREFIX}}{{PROJECT_NAME}}.Controllers" }, { "area", null } };
+            controllerName = "__CONTROLLER_PREFIX____PROJECT_NAME__";
+            routeValues = new RouteValueDictionary { { "Namespaces", "__NAMESPACE_PREFIX____PROJECT_NAME__.Controllers" }, { "area", null } };
         }
 
         public void GetDisplayWidgetRoute(string widgetZone, out string actionName, out string controllerName, out System.Web.Routing.RouteValueDictionary routeValues)
         {
             actionName = "PublicInfo";
-            controllerName = "{{CONTROLLER_PREFIX}}{{PROJECT_NAME}}";
+            controllerName = "__CONTROLLER_PREFIX____PROJECT_NAME__";
             routeValues = new RouteValueDictionary
             {
-                {"Namespaces", "{{NAMESPACE_PREFIX}}{{PROJECT_NAME}}.Controllers"},
+                {"Namespaces", "__NAMESPACE_PREFIX____PROJECT_NAME__.Controllers"},
                 {"area", null},
                 {"widgetZone", widgetZone}
             };
@@ -46,7 +46,7 @@ namespace {{NAMESPACE_PREFIX}}.{{PROJECT_NAME}}
         public IList<string> GetWidgetZones()
         {
             return new List<string>() {
-                {{PROJECT_NAME}}Settings.WidgetZones.{{WIDGET_ZONE}}.ToString()
+                __PROJECT_NAME__Settings.WidgetZones.__WIDGET_ZONE__.ToString()
             };
         }
         
@@ -55,14 +55,14 @@ namespace {{NAMESPACE_PREFIX}}.{{PROJECT_NAME}}
         /// </summary>
         public override void Install()
         {
-            var settings = new {{PROJECT_NAME}}Settings
+            var settings = new __PROJECT_NAME__Settings
             {
-                Display{{PROJECT_NAME}}Widget = false
+                Display__PROJECT_NAME__Widget = false
             };
             _settingService.SaveSetting(settings);
 
-            this.AddOrUpdatePluginLocaleResource("{{NAMESPACE_PREFIX}}.{{PROJECT_NAME}}.Instructions", "Fill out the following information, either sitewide, or by store.");
-            this.AddOrUpdatePluginLocaleResource("{{NAMESPACE_PREFIX}}.{{PROJECT_NAME}}.Display{{PROJECT_NAME}}Widget", "Display {{DESCRIPTION_FriendlyName}} Widget");
+            this.AddOrUpdatePluginLocaleResource("__NAMESPACE_PREFIX__.__PROJECT_NAME__.Instructions", "Fill out the following information, either sitewide, or by store.");
+            this.AddOrUpdatePluginLocaleResource("__NAMESPACE_PREFIX__.__PROJECT_NAME__.Display__PROJECT_NAME__Widget", "Display __DESCRIPTION_FriendlyName__ Widget");
 
             base.Install();
         }
@@ -73,11 +73,11 @@ namespace {{NAMESPACE_PREFIX}}.{{PROJECT_NAME}}
         public override void Uninstall()
         {
             //settings
-            _settingService.DeleteSetting<{{PROJECT_NAME}}Settings>();
+            _settingService.DeleteSetting<__PROJECT_NAME__Settings>();
 
             //locales
-            this.DeletePluginLocaleResource("{{NAMESPACE_PREFIX}}.{{PROJECT_NAME}}.Instructions");
-            this.DeletePluginLocaleResource("{{NAMESPACE_PREFIX}}.{{PROJECT_NAME}}.Display{{PROJECT_NAME}}Widget");
+            this.DeletePluginLocaleResource("__NAMESPACE_PREFIX__.__PROJECT_NAME__.Instructions");
+            this.DeletePluginLocaleResource("__NAMESPACE_PREFIX__.__PROJECT_NAME__.Display__PROJECT_NAME__Widget");
 
             base.Uninstall();
         }

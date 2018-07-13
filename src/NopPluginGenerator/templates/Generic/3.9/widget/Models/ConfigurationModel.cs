@@ -1,6 +1,6 @@
 ﻿using Nop.Web.Framework;
 
-namespace {{NAMESPACE_PREFIX}}.{{PROJECT_NAME}}.Models
+namespace __NAMESPACE_PREFIX__.__PROJECT_NAME__.Models
 {
     public class ConfigurationModel
     {
@@ -11,8 +11,8 @@ namespace {{NAMESPACE_PREFIX}}.{{PROJECT_NAME}}.Models
 
         }
 
-        [NopResourceDisplayName("{{NAMESPACE_PREFIX}}.{{PROJECT_NAME}}.Display{{PROJECT_NAME}}Widget")]
-        public bool Display{{PROJECT_NAME}}Widget { get; set; }
-        public bool Display{{PROJECT_NAME}}Widget_OverrideForStore { get; set; }
+        [NopResourceDisplayName("__NAMESPACE_PREFIX__.__PROJECT_NAME__.Display__PROJECT_NAME__Widget")]
+        public bool Display__PROJECT_NAME__Widget { get; set; }
+        public bool Display__PROJECT_NAME__Widget_OverrideForStore { get; set; }
     }
 }

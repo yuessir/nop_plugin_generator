@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{{PROJECT_GUID}}</ProjectGuid>
+    <ProjectGuid>__PROJECT_GUID__</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>{{NAMESPACE_PREFIX}}.{{PROJECT_NAME}}</RootNamespace>
-    <AssemblyName>{{NAMESPACE_PREFIX}}.{{PROJECT_NAME}}</AssemblyName>
+    <RootNamespace>__NAMESPACE_PREFIX__.__PROJECT_NAME__</RootNamespace>
+    <AssemblyName>__NAMESPACE_PREFIX__.__PROJECT_NAME__</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
@@ -29,7 +29,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>c:\NopCommerce\wwwroot\Plugins\Widgets.{{PROJECT_NAME}}\</OutputPath>
+    <OutputPath>c:\NopCommerce\wwwroot\Plugins\Widgets.__PROJECT_NAME__\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -38,7 +38,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>c:\NopCommerce\wwwroot\Plugins\Widgets.{{PROJECT_NAME}}\</OutputPath>
+    <OutputPath>c:\NopCommerce\wwwroot\Plugins\Widgets.__PROJECT_NAME__\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -55,9 +55,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\{{CONTROLLER_PREFIX}}{{PROJECT_NAME}}Controller.cs" />
-    <Compile Include="{{PROJECT_NAME}}Plugin.cs" />
-    <Compile Include="{{PROJECT_NAME}}Settings.cs" />    
+    <Compile Include="Controllers\__CONTROLLER_PREFIX____PROJECT_NAME__Controller.cs" />
+    <Compile Include="__PROJECT_NAME__Plugin.cs" />
+    <Compile Include="__PROJECT_NAME__Settings.cs" />    
     <Compile Include="Infrastructure\DependencyRegistrar.cs" />
     <Compile Include="Infrastructure\RouteProvider.cs" />
     <Compile Include="Models\ConfigurationModel.cs" />
@@ -65,19 +65,19 @@
     <Compile Include="Properties\AssemblyInfo.cs" />        
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\{{CONTROLLER_PREFIX}}{{PROJECT_NAME}}\PublicInfo.cshtml">
+    <Content Include="Views\__CONTROLLER_PREFIX____PROJECT_NAME__\PublicInfo.cshtml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Views\{{CONTROLLER_PREFIX}}{{PROJECT_NAME}}\Configure.cshtml">
+    <None Include="Views\__CONTROLLER_PREFIX____PROJECT_NAME__\Configure.cshtml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <Content Include="Views\{{CONTROLLER_PREFIX}}{{PROJECT_NAME}}\List.cshtml">
+    <Content Include="Views\__CONTROLLER_PREFIX____PROJECT_NAME__\List.cshtml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="web.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Views\{{CONTROLLER_PREFIX}}{{PROJECT_NAME}}\Test.cshtml">
+    <Content Include="Views\__CONTROLLER_PREFIX____PROJECT_NAME__\Test.cshtml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

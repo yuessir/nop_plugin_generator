@@ -1,0 +1,65 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <Copyright>Copyright © Nop Solutions, Ltd</Copyright> 
+    <Company>Nop Solutions, Ltd</Company> 
+    <Authors>Nop Solutions, Ltd</Authors>
+    <PackageLicenseUrl></PackageLicenseUrl> 
+    <PackageProjectUrl>http://www.nopcommerce.com/</PackageProjectUrl> 
+    <RepositoryUrl>https://github.com/nopSolutions/nopCommerce</RepositoryUrl> 
+    <RepositoryType>Git</RepositoryType>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <None Remove="logo.jpg" />
+    <None Remove="plugin.json" />
+    <None Remove="Views\Configure.cshtml" />
+    <None Remove="Views\PublicInfo.cshtml" />
+    <None Remove="Views\_PublicInfo.SliderLine.cshtml" />
+  </ItemGroup>
+  
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>Widgets.__PROJECT_NAME__</OutputPath>
+    <OutDir>$(OutputPath)</OutDir>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>Widgets.__PROJECT_NAME__</OutputPath>
+    <OutDir>$(OutputPath)</OutDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="logo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="plugin.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Nop.Core">
+      <HintPath>..\lib\Nop.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Nop.Data">
+      <HintPath>..\lib\Nop.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Nop.Services">
+      <HintPath>..\lib\Nop.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="Nop.Web.Framework">
+      <HintPath>..\lib\Nop.Web.Framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+ 
+  
+  <!-- This target execute after "Build" target -->
+  <Target Name="NopTarget" AfterTargets="Build">
+  </Target>
+
+</Project>

@@ -13,7 +13,7 @@ namespace NopPluginGenerator.Template
 
         public static string ReplaceToken(string template, string tokenName, string value)
         {
-            return template.Replace("{{" + tokenName + "}}", value);
+            return template.Replace("__" + tokenName + "__", value);
         }
 
         public static string ReplaceTokens(Dictionary<string, string> tokens, string template)
@@ -49,7 +49,7 @@ namespace NopPluginGenerator.Template
         {
             foreach (var token in tokens)
             {
-                if (template.Contains("{{"+token.Key+"}}"))
+                if (template.Contains("__"+token.Key+"__"))
                 {
                     return true;
                 }

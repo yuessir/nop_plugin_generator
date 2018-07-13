@@ -10,11 +10,8 @@ namespace NopPluginGenerator.Utility
         /// </summary>
         /// <param name="SolutionDirectory"></param>
         /// <param name="TargetDirectory"></param>
-       public static void ProcessXcopy(string SolutionDirectory, string TargetDirectory)
-        {
-            Console.WriteLine(SolutionDirectory);
-            Console.WriteLine(TargetDirectory);
-
+       public static void ProcessXcopy(string solutionDirectory, string targetDirectory)
+        {            
             // Use ProcessStartInfo class
             ProcessStartInfo startInfo = new ProcessStartInfo();
             startInfo.CreateNoWindow = false;
@@ -24,9 +21,7 @@ namespace NopPluginGenerator.Utility
             //make the window Hidden
             startInfo.WindowStyle = ProcessWindowStyle.Hidden;
             //Send the Source and destination as Arguments to the process
-            startInfo.Arguments = "\"" + SolutionDirectory + "\"" + " " + "\"" + TargetDirectory + "\"" + @" /e /y /I";
-            
-            Console.WriteLine(startInfo.Arguments);
+            startInfo.Arguments = "\"" + solutionDirectory + ".\" \"" + targetDirectory + "\"" + @" /e /y /I";
             
             try
             {
@@ -41,6 +36,7 @@ namespace NopPluginGenerator.Utility
             {
                throw exp;
             }
+            System.Console.WriteLine("copied");
         }
 
         public static string[] GetFiles(string folder){

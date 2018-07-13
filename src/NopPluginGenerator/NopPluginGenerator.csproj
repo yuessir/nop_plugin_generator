@@ -32,11 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CommandLine, Version=2.2.1.0, Culture=neutral, PublicKeyToken=de6f01bd326f8c32, processorArchitecture=MSIL">
-      <HintPath>..\packages\CommandLineParser.2.2.1\lib\net45\CommandLine.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Console, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Console.4.0.0\lib\net46\System.Console.dll</HintPath>
       <Private>True</Private>
@@ -53,12 +51,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuration\TemplateConfig.cs" />
-    <Compile Include="Configuration\TemplateMapping.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Template.cs" />
-    <Compile Include="TokenFile.cs" />
+    <None Include="templates\Generic\3.9\widget\Controllers\{{CONTROLLER_PREFIX}}{{PROJECT_NAME}}Controller.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="templates\Generic\3.9\widget\Infrastructure\DependencyRegistrar.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="templates\Generic\3.9\widget\Infrastructure\RouteProvider.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="templates\Generic\3.9\widget\Models\ConfigurationModel.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="templates\Generic\3.9\widget\Models\PublicInfoViewModel.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="templates\Generic\3.9\widget\Properties\AssemblyInfo.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="templates\Generic\3.9\widget\DefaultTokens.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\Generic\3.9\widget\Description.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\Generic\3.9\widget\logo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\Generic\3.9\widget\Notes.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\Generic\3.9\widget\{{PROJECT_NAME}}Plugin.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="templates\Generic\3.9\widget\{{PROJECT_NAME}}Settings.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="Template\Processor.cs" />
+    <Compile Include="Template\TemplateDoc.cs" />
+    <Compile Include="Template\TemplateFolder.cs" />
+    <Compile Include="Template\TokenFile.cs" />
     <Compile Include="Utility\FileHelper.cs" />
     <Compile Include="Utility\XmlSerializationHelper.cs" />
   </ItemGroup>
@@ -67,16 +101,26 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="templates.xml" />
+    <None Include="templates\Generic\3.9\widget\Views\{{CONTROLLER_PREFIX}}{{PROJECT_NAME}}\Configure.cshtml" />
+    <None Include="templates\Generic\3.9\widget\Views\{{CONTROLLER_PREFIX}}{{PROJECT_NAME}}\List.cshtml" />
+    <None Include="templates\Generic\3.9\widget\Views\{{CONTROLLER_PREFIX}}{{PROJECT_NAME}}\PublicInfo.cshtml" />
+    <None Include="templates\Generic\3.9\widget\Views\{{CONTROLLER_PREFIX}}{{PROJECT_NAME}}\Test.cshtml" />
+    <Content Include="templates\Generic\3.9\widget\web.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="token.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="token.txt" />
+    <Content Include="templates\Generic\3.9\widget\{{NAMESPACE_PREFIX}}.{{PROJECT_NAME}}.csproj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="tokenMPS.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="templates\BAS\plugin\widget\" />
+    <Folder Include="templates\Generic\3.5\" />
+    <Folder Include="templates\Generic\4.0\" />
+    <Folder Include="templates\Generic\4.1\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

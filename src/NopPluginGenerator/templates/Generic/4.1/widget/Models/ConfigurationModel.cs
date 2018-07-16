@@ -7,9 +7,9 @@ namespace __NAMESPACE_PREFIX__.__PROJECT_NAME__.Models
     public class ConfigurationModel : BaseNopModel
     {
         public int ActiveStoreScopeConfiguration { get; set; }
-      
+
         [NopResourceDisplayName("__NAMESPACE_PREFIX__.__PROJECT_NAME__.XXXXX")]
-        public string XXXXX { get; set; }
-        public bool XXXXX_OverrideForStore { get; set; }
+        public string XXXX { get; set; }
+        public bool XXXX_OverrideForStore { get; set; }
     }
 }

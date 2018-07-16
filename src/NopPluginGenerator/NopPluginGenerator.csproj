@@ -60,8 +60,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="templates\Generic\4.1\widget\Views\_ViewImports.cshtml" />
-    <None Include="templates\Generic\4.1\widget\Views\__CONTROLLER_PREFIX____PROJECT_NAME__\Configure.cshtml" />
-    <None Include="templates\Generic\4.1\widget\Views\__CONTROLLER_PREFIX____PROJECT_NAME__\PublicInfo.cshtml" />
+    <None Include="templates\Generic\4.1\widget\Views\__CONTROLLER_PREFIX____PROJECT_NAME__\Configure.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="templates\Generic\4.1\widget\Views\__CONTROLLER_PREFIX____PROJECT_NAME__\PublicInfo.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="templates\Generic\4.1\widget\__NAMESPACE_PREFIX__.__PROJECT_NAME__.csproj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -150,7 +154,6 @@
   <ItemGroup>
     <Folder Include="templates\Generic\3.5\" />
     <Folder Include="templates\Generic\4.0\" />
-    <Folder Include="templates\Generic\4.1\widget\Infrastructure\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

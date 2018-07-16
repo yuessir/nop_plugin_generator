@@ -5,7 +5,6 @@ using Nop.Core.Plugins;
 using Nop.Services.Cms;
 using Nop.Services.Configuration;
 using Nop.Services.Localization;
-using Nop.Services.Media;
 using Nop.Web.Framework.Infrastructure;
 
 namespace __NAMESPACE_PREFIX__.__PROJECT_NAME__
@@ -15,17 +14,14 @@ namespace __NAMESPACE_PREFIX__.__PROJECT_NAME__
         private readonly ILocalizationService _localizationService;
         private readonly ISettingService _settingService;
         private readonly IWebHelper _webHelper;
-        private readonly INopFileProvider _fileProvider;
 
         public __PROJECT_NAME__Plugin(ILocalizationService localizationService,
             ISettingService settingService,
-            IWebHelper webHelper,
-            INopFileProvider fileProvider)
+            IWebHelper webHelper)
         {
             this._localizationService = localizationService;
             this._settingService = settingService;
             this._webHelper = webHelper;
-            this._fileProvider = fileProvider;
         }
 
         /// <summary>
@@ -42,7 +38,7 @@ namespace __NAMESPACE_PREFIX__.__PROJECT_NAME__
         /// </summary>
         public override string GetConfigurationPageUrl()
         {
-            return _webHelper.GetStoreLocation() + "Admin/Widgets__PROJECT_NAME__/Configure";
+            return _webHelper.GetStoreLocation() + $"Admin/__CONTROLLER_PREFIX____PROJECT_NAME__/Configure";
         }
 
         /// <summary>
@@ -52,7 +48,7 @@ namespace __NAMESPACE_PREFIX__.__PROJECT_NAME__
         /// <returns>View component name</returns>
         public string GetWidgetViewComponentName(string widgetZone)
         {
-            return "Widgets__PROJECT_NAME__";
+            return $"Widgets__PROJECT_NAME__";
         }
 
         /// <summary>
@@ -63,7 +59,7 @@ namespace __NAMESPACE_PREFIX__.__PROJECT_NAME__
             //settings
             var settings = new __PROJECT_NAME__Settings
             {
-     
+
             };
 
             _settingService.SaveSetting(settings);

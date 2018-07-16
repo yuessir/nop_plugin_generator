@@ -3,6 +3,7 @@
 @{
     Layout = "_ConfigurePlugin";
 }
+@inject Nop.Core.IWebHelper webHelper
 
 @await Component.InvokeAsync("StoreScopeConfiguration")
 <form asp-controller="Widgets__PROJECT_NAME__" asp-action="Configure" method="post">
@@ -14,12 +15,12 @@
             <div class="panel-body">
                 <div class="form-group">
                     <div class="col-md-3">
-                        @*<nop-override-store-checkbox asp-for="Picture1Id_OverrideForStore" asp-input="Picture1Id" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
-                        <nop-label asp-for="Picture1Id" />*@
+                        @*<nop-override-store-checkbox asp-for="XXXX_OverrideForStore" asp-input="XXXX" asp-store-scope="@Model.ActiveStoreScopeConfiguration" />
+                            <nop-label asp-for="XXXX" />*@
                     </div>
                     <div class="col-md-9">
-                        @*<nop-editor asp-for="Picture1Id" />
-                        <span asp-validation-for="Picture1Id"></span>*@
+                        @*<nop-editor asp-for="XXXX" />
+                            <span asp-validation-for="XXXX"></span>*@
                     </div>
                 </div>
             </div>

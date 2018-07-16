@@ -15,17 +15,16 @@
     <None Remove="logo.jpg" />
     <None Remove="plugin.json" />
     <None Remove="Views\Configure.cshtml" />
-    <None Remove="Views\PublicInfo.cshtml" />
-    <None Remove="Views\_PublicInfo.SliderLine.cshtml" />
+    <None Remove="Views\PublicInfo.cshtml" />    
   </ItemGroup>
   
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <OutputPath>Widgets.__PROJECT_NAME__</OutputPath>
+    <OutputPath>..\..\Presentation\Nop.Web\Plugins\__DESCRIPTION_SystemName__</OutputPath>
     <OutDir>$(OutputPath)</OutDir>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>Widgets.__PROJECT_NAME__</OutputPath>
+    <OutputPath>..\..\Presentation\Nop.Web\Plugins\__DESCRIPTION_SystemName__</OutputPath>
     <OutDir>$(OutputPath)</OutDir>
   </PropertyGroup>
 
@@ -42,19 +41,20 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.1" />
   </ItemGroup>
 
+  <ItemGroup>    
+    <ProjectReference Include="..\..\Presentation\Nop.Web.Framework\Nop.Web.Framework.csproj" />
+  </ItemGroup>
+
   <ItemGroup>
-    <Reference Include="Nop.Core">
-      <HintPath>..\lib\Nop.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Nop.Data">
-      <HintPath>..\lib\Nop.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Nop.Services">
-      <HintPath>..\lib\Nop.Services.dll</HintPath>
-    </Reference>
-    <Reference Include="Nop.Web.Framework">
-      <HintPath>..\lib\Nop.Web.Framework.dll</HintPath>
-    </Reference>
+    <None Update="Views\_ViewImports.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Views\__CONTROLLER_PREFIX____PROJECT_NAME__\Configure.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Views\__CONTROLLER_PREFIX____PROJECT_NAME__\PublicInfo.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
  
   

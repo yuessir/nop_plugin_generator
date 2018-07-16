@@ -3,7 +3,7 @@
   "FriendlyName": "__DESCRIPTION_FriendlyName__",
   "SystemName": "__DESCRIPTION_SystemName__",
   "Version": "__DESCRIPTION_Version__",
-  "SupportedVersions": __DESCRIPTION_SupportedVersions__,
+  "SupportedVersions": [ __DESCRIPTION_SupportedVersions__ ],
   "Author": "__DESCRIPTION_Author__",
   "DisplayOrder": __DESCRIPTION_DisplayOrder__,
   "FileName": "__DESCRIPTION_FileName__",

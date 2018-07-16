@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using NopPluginGenerator.Utility;
 using NopPluginGenerator.Template;
 
 namespace NopPluginGenerator
@@ -28,6 +24,8 @@ namespace NopPluginGenerator
             var outputFolder = args[4];
 
             Processor.Process(templateName, templateType, templateVersion, tokenFile, outputFolder);
+
+            Console.ReadKey();
         }
            
 

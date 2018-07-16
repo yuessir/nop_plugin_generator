@@ -13,7 +13,7 @@ namespace __NAMESPACE_PREFIX__.PROJECT_NAME.Components
         private readonly IStoreContext _storeContext;
         private readonly ISettingService _settingService;
 
-        public Widgets__PROJECT_NAME__ViewComponent(IStoreContext storeContext, 
+        public Widgets__PROJECT_NAME__ViewComponent(IStoreContext storeContext,
             ISettingService settingService)
         {
             this._storeContext = storeContext;
@@ -26,12 +26,9 @@ namespace __NAMESPACE_PREFIX__.PROJECT_NAME.Components
 
             var model = new PublicInfoModel
             {
-       
+
             };
-
-            return View("~/Plugins/Widgets.__PROJECT_NAME__/Views/PublicInfo.cshtml", model);
+            return View($"~/Plugins/{__PROJECT_NAME__Settings.PluginFolder}/Views/__CONTROLLER_PREFIX____PROJECT_NAME__/PublicInfo.cshtml", model);
         }
-
-       
     }
 }
